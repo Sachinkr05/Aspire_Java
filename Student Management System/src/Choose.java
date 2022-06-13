@@ -5,7 +5,21 @@ public class Choose extends viewDetails
 {
 	
 	Scanner scanner=new Scanner(System.in);
-	int choose;
+	int ch;
+	
+	static Choose choose = new Choose();
+	
+	private Choose()
+	{
+		
+	}
+	
+	public static Choose getInstance()
+	{
+		return choose;  
+		
+	}
+	
 
 	
 	public void choise()
@@ -13,9 +27,9 @@ public class Choose extends viewDetails
 	
 	System.out.println("\t\t-----------Student Management System-----------\n------------------------------------------------------------------------------------\n");
 	System.out.println("\t\t\t\t1.Add new Student\n\t\t\t\t2.View Sudent Details\n\t\t\t\t0:Exit");
-	choose=scanner.nextInt();
+	ch=scanner.nextInt();
 	
-	switch(choose)
+	switch(ch)
 	{
 	case 1:addStudent();
 		break;
@@ -29,7 +43,7 @@ public class Choose extends viewDetails
 	default:System.out.println("Enter a valid choice");
 		break;
 	}
-	while(choose>0)
+	while(ch>0)
 	{
 	choise();
 	}
